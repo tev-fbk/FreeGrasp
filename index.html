@@ -191,66 +191,6 @@
 </section>
 
 
-
-<!-- 
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
-
-
 <section class="section">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
@@ -275,6 +215,44 @@
       </div>
     </div>
     <!--/ Abstract. -->
+
+<!-- Method Section -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Method</h2>
+        <img src="./static/images/blockdiagram-mage.png" alt="Architecture of FreeGrasp" />
+        <div class="content has-text-justified" style="margin-top: 2rem;">
+          <p>
+            Our method takes as inputs: <i>(i)</i> a text prompt in natural language, <i>(ii)</i> the 3D scene represented as a point cloud, and <i>(iii)</i> a visual prompt provided as either a user click or a bounding box.
+          </p>
+          <p>
+            The text prompt is processed by a <i>text prompt encoder</i>, which generates text representations. These representations are input to both the <i>Large Language Model (LLM)</i> and the <i>multimodal adapter (MMA)</i>.
+              The text encoder is a transformer architecture based on BLIP-2.
+          </p>
+          <p>
+            The 3D scene, represented as a point cloud, is processed by our <i>perceptive scene encoder</i>.
+              This encoder generates scene representations that are utilized by the MMA and subsequent processing components. Details of the perceptive scene encoder will be provided in the following sections.
+          </p>
+          <p>
+            The visual prompt, whether a user click or a bounding box, is handled by the <i>visual prompt encoder</i>.
+              By integrating representations from the perceptive scene encoder, the visual prompt encoder outputs refined scene representations,
+              which are subsequently processed by the MMA. For more details on visual prompts, please refer to the supplementary material.
+          </p>
+          <p>
+            The MMA takes the multimodal representations as input and outputs tokens for the LLM. The MMA is implemented as a Q-former.
+              Its outputs are projected into the LLM's representation space through a linear projector.
+              Finally, these projected representations are processed by the LLM to generate the output response.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr>
+
 
     <!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
