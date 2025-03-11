@@ -262,37 +262,74 @@
 <!-- End grounding exp table -->
 
 
-<!-- Grounding image carousel -->
+<!-- Grounding Image Carousel -->
 <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-          <img src="static/images/synthetic-dataset.png" alt="MY ALT TEXT" style="width: 75%; display: block; margin: 20px auto;" />
-        <h2 class="subtitle has-text-centered">
-            Grounding open-vocabulary object names and attributes.
-        </h2>
+      <h2 class="title is-3 has-text-centered">Grounding Image Carousel</h2>
+      
+      <!-- Swiper 轮播容器 -->
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          
+          <!-- Slide 1 -->
+          <div class="swiper-slide">
+            <img src="static/images/synthetic-dataset.png" alt="Grounding open-vocabulary object names and attributes" style="width: 75%; display: block; margin: 20px auto;" />
+            <h2 class="subtitle has-text-centered">Grounding open-vocabulary object names and attributes.</h2>
+          </div>
+          
+          <!-- Slide 2 -->
+          <div class="swiper-slide">
+            <img src="static/images/synthetic-dataset.png" alt="Grounding complex relations between objects" style="width: 75%; display: block; margin: 20px auto;" />
+            <h2 class="subtitle has-text-centered">Grounding complex relations between objects.</h2>
+          </div>
+          
+          <!-- Slide 3 -->
+          <div class="swiper-slide">
+            <img src="static/images/synthetic-dataset.png" alt="Grounding user affordances with contextual semantics" style="width: 75%; display: block; margin: 20px auto;" />
+            <h2 class="subtitle has-text-centered">Grounding user affordances with contextual semantics.</h2>
+          </div>
+
+        </div>
+        
+        <!-- 左右箭头 -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        
+        <!-- 分页指示点 -->
+        <div class="swiper-pagination"></div>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-          <img src="static/images/synthetic-dataset.png" alt="MY ALT TEXT" style="width: 75%; display: block; margin: 20px auto;" />
-        <h2 class="subtitle has-text-centered">
-          Grounding complex relations between objects.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-          <img src="static/images/synthetic-dataset.png" alt="MY ALT TEXT" style="width: 75%; display: block; margin: 20px auto;" />
-        <h2 class="subtitle has-text-centered">
-          Grounding user affordances with contextual semantics.
-       </h2>
-     </div>
+      
+    </div>
   </div>
-</div>
-</div>
 </section>
-<!-- End grounding image carousel -->
+<!-- End Grounding Image Carousel -->
+
+<!-- Swiper.js 依赖 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<!-- 轮播初始化 -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var swiper = new Swiper(".swiper-container", {
+      loop: true,  // 无限循环
+      autoplay: {
+        delay: 3000,  // 3秒切换
+        disableOnInteraction: false, // 用户交互后继续播放
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,  // 允许点击分页切换
+      },
+    });
+  });
+</script>
+
 
 
 <section class="section">
