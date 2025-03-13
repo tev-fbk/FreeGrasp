@@ -1,8 +1,8 @@
-# Runyu
+# FreeGrasp
 
-This is the repository that contains source code for the [Nerfies website](https://nerfies.github.io).
+This is the repository that contains source code for the [FreeGrasp website](https://ryan7180.github.io/FreeGrasp/).
 
-If you find Nerfies useful for your work please cite:
+If you find FreeGrasp useful for your work please cite:
 ```
 @article{FreeGrasp2025
   author    = {Jiao, Runyu and Fasoli, Alice and Giuliari, Francesco and Bortolon, Matteo and Povoli, Sergio and Mei, Guofeng and Wang, Yiming and Fabio, Poiesi},
