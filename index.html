@@ -67,7 +67,7 @@
           <!-- <h1 class="title is-1 publication-title">Free-form Language-based Robotic Reasoning and Grasping</h1> -->
           <h1 class="title is-1 publication-title">
             <img src="./static/images/robotic_icon.png" alt="Robot Arm" style="width: 50px; height: auto; vertical-align: middle; margin-right: 10px;">
-            Free-form Language-based Robotic Reasoning and Grasping
+            Free-form language-based robotic reasoning and grasping
           </h1>          
           <div class="is-size-5 publication-authors">
             <span class="author-block">
@@ -104,6 +104,12 @@
             <span class="author-block"><sup>3</sup>Istituto Italiano di Tecnologia</span>
           </div>
 
+
+          <span class="author-block">
+            Acknowledgement: 
+            <img src="static/images/VRT.png" alt="Icon" class="ack-icon">
+          </span>
+
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
@@ -127,7 +133,7 @@
               </span>
               <!-- Video Link. -->
               <span class="link-block">
-                <a href="https://youtu.be/-YE7JsrVPac"
+                <a href="https://www.youtube.com/embed/11vVfeOyf94?si=4XuxRI9MEUjskvMK"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
@@ -247,7 +253,7 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/6b-JyGPhOOY?si=iPppCL_bdVCwfmpf"
+          <iframe src="https://www.youtube.com/embed/11vVfeOyf94?si=4XuxRI9MEUjskvMK"
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
@@ -258,80 +264,35 @@
 
 <hr>
 
-<!-- Grounding Image Carousel -->
-<section class="hero is-small" style="background-color: white; padding: 20px 0;">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-4 has-text-centered">Free-form Language Grasping Dataset</h2> <!-- 缩小标题大小 -->
-      
-      <!-- Swiper 轮播容器 -->
-      <div class="swiper-container">
-        <div class="swiper-wrapper">
-          
-          <!-- Slide 1 -->
-          <div class="swiper-slide">
-            <img src="static/images/synthetic-dataset.png" alt="Grounding open-vocabulary object names and attributes" style="width: 60%; height: auto; display: block; margin: 10px auto;" />
-            <h2 class="subtitle has-text-centered" style="font-size: 0.9rem;">.</h2>
-          </div>
-          
-          <!-- Slide 2 -->
-          <div class="swiper-slide">
-            <img src="static/images/synthetic-dataset.png" alt="Grounding complex relations between objects" style="width: 60%; height: auto; display: block; margin: 10px auto;" />
-            <h2 class="subtitle has-text-centered" style="font-size: 0.9rem;">.</h2>
-          </div>
-          
-          <!-- Slide 3 -->
-          <div class="swiper-slide">
-            <img src="static/images/synthetic-dataset.png" alt="Grounding user affordances with contextual semantics" style="width: 60%; height: auto; display: block; margin: 10px auto;" />
-            <h2 class="subtitle has-text-centered" style="font-size: 0.9rem;">.</h2>
-          </div>
-
-        </div>
-        
-        <!-- 左右箭头 -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-        
-        <!-- 分页指示点 -->
-        <div class="swiper-pagination"></div>
-      </div>
-      
-    </div>
-  </div>
-</section>
-
-<!-- Swiper.js 依赖 -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
-<!-- 轮播初始化 -->
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    var swiper = new Swiper(".swiper-container", {
-      loop: true,  // 无限循环
-      autoplay: {
-        delay: 3000,  // 3秒切换
-        disableOnInteraction: false, // 用户交互后继续播放
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,  // 允许点击分页切换
-      },
-    });
-  });
-</script>
-
 
 
 <!-- Static Image Section -->
 <section class="hero is-small" style="background-color: white; padding: 20px 0;">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-4 has-text-centered">Real-world setup</h2> <!-- 缩小标题大小 -->
+      <h2 class="title is-4 has-text-centered">Free-form language grasping dataset</h2> 
+      
+      <!-- 单张图片 -->
+      <div class="image-container">
+        <img src="static/images/synthetic-dataset.png" 
+             alt="Grounding open-vocabulary object names and attributes" 
+             style="width: 60%; height: auto; display: block; margin: 10px auto;" />
+        <h2 class="subtitle has-text-centered" style="font-size: 0.9rem;">
+
+        </h2>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- End Static Image Section -->
+
+
+<!-- Static Image Section -->
+<section class="hero is-small" style="background-color: white; padding: 20px 0;">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-4 has-text-centered">Real-world setup</h2> 
       
       <!-- 单张图片 -->
       <div class="image-container">
@@ -339,7 +300,7 @@
              alt="Grounding open-vocabulary object names and attributes" 
              style="width: 60%; height: auto; display: block; margin: 10px auto;" />
         <h2 class="subtitle has-text-centered" style="font-size: 0.9rem;">
-          .
+
         </h2>
       </div>
 
@@ -357,7 +318,7 @@
     <!-- Animation. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Example of the Complete Method </h2>
+        <h2 class="title is-3">Example of the complete method </h2>
 
         <!-- Only Keep the Image -->
         <div class="has-text-centered">
@@ -375,7 +336,7 @@
     <!-- Concurrent Work. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
+        <h2 class="title is-3">Related links</h2>
 
         <div class="content has-text-justified">
           <p>

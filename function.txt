@@ -1,0 +1,66 @@
+<!-- Grounding Image Carousel -->
+<section class="hero is-small" style="background-color: white; padding: 20px 0;">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-4 has-text-centered">Free-form language grasping dataset</h2> <!-- 缩小标题大小 -->
+      
+      <!-- Swiper 轮播容器 -->
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          
+          <!-- Slide 1 -->
+          <div class="swiper-slide">
+            <img src="static/images/synthetic-dataset.png" alt="Grounding open-vocabulary object names and attributes" style="width: 60%; height: auto; display: block; margin: 10px auto;" />
+            <h2 class="subtitle has-text-centered" style="font-size: 0.9rem;">.</h2>
+          </div>
+          
+          <!-- Slide 2 -->
+          <div class="swiper-slide">
+            <img src="static/images/synthetic-dataset.png" alt="Grounding complex relations between objects" style="width: 60%; height: auto; display: block; margin: 10px auto;" />
+            <h2 class="subtitle has-text-centered" style="font-size: 0.9rem;">.</h2>
+          </div>
+          
+          <!-- Slide 3 -->
+          <div class="swiper-slide">
+            <img src="static/images/synthetic-dataset.png" alt="Grounding user affordances with contextual semantics" style="width: 60%; height: auto; display: block; margin: 10px auto;" />
+            <h2 class="subtitle has-text-centered" style="font-size: 0.9rem;">.</h2>
+          </div>
+
+        </div>
+        
+        <!-- 左右箭头 -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        
+        <!-- 分页指示点 -->
+        <div class="swiper-pagination"></div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<!-- Swiper.js 依赖 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<!-- 轮播初始化 -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var swiper = new Swiper(".swiper-container", {
+      loop: true,  // 无限循环
+      autoplay: {
+        delay: 3000,  // 3秒切换
+        disableOnInteraction: false, // 用户交互后继续播放
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,  // 允许点击分页切换
+      },
+    });
+  });
+</script>

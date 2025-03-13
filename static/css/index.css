@@ -159,3 +159,10 @@ body {
 .subtitle {
   text-transform: none !important;
 }
+
+.ack-icon {
+  width: 75px; /* Adjust to make it smaller */
+  height: auto; /* Maintain aspect ratio */
+  margin-left: 5px; /* Add spacing from text */
+  vertical-align: middle; /* Align properly with the text */
+}
