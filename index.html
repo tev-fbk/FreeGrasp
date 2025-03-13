@@ -87,7 +87,7 @@
               <a href="https://gfmei.github.io/">Guofeng Mei</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="https://www.yimingwang.it/">Yiming Wang</a><sup>1</sup>
+              <a href="https://www.yimingwang.it/">Yiming Wang</a><sup>1</sup>,
             </span>
             <span class="author-block">
               <a href="https://fabiopoiesi.github.io/">Fabio Poiesi</a><sup>1</sup>
@@ -108,7 +108,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
+                <a href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -117,7 +117,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2011.12948"
+                <a href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -137,7 +137,7 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies"
+                <a href="https://github.com/Ryan7180/FreeGrasp"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -147,7 +147,7 @@
               </span>
               <!-- Dataset Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                <a href="https://github.com/Ryan7180/FreeGrasp"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-images"></i>
@@ -169,15 +169,15 @@
       <img src="./static/images/teaser1.png" alt="Teaser Image" style="width: 100vw; height: auto; display: block;">
       <h2 class="subtitle" style="text-align: justify;">
           To enable a human to command a robot using free-form language instructions, our method leverages the world knowledge of Vision-Language Models to interpret instructions and reason about object spatial relationships.
-          This is important when the target object (<span style="color: rgba(255, 255, 0, 0.938);">&#9733;</span>) is not directly graspable, requiring the robot to first identify and remove obstructing objects 
-          (<span style="color: green; font-size: 0.8em;">&#128994;</span>).
+          This is important when the target object (<span style="color: rgb(255, 230, 0); font-size: 1.3em;">&#9733;</span>) is not directly graspable, requiring the robot to first identify and remove obstructing objects 
+          (<span style="color: rgb(4, 128, 0); font-size: 0.8em;">&#128994;</span>).
           By optimizing the sequence of actions, our approach ensures efficient task completion.
       </h2>
     </div>
   </div>
 </section>
 
-
+<hr>
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -216,25 +216,22 @@
         <img src="./static/images/blockdiagram-mage.png" alt="Architecture of FreeGrasp" />
         <div class="content has-text-justified" style="margin-top: 2rem;">
           <p>
-            Our method takes as inputs: <i>(i)</i> a text prompt in natural language, <i>(ii)</i> the 3D scene represented as a point cloud, and <i>(iii)</i> a visual prompt provided as either a user click or a bounding box.
+            Our method takes as inputs: <i>(i)</i> an RGB-D image capturing the 3D scene from a top-down view, <i>(ii)</i> a free-form text instruction from the user.
           </p>
           <p>
-            The text prompt is processed by a <i>text prompt encoder</i>, which generates text representations. These representations are input to both the <i>Large Language Model (LLM)</i> and the <i>multimodal adapter (MMA)</i>.
-              The text encoder is a transformer architecture based on BLIP-2.
+            With the RGB observation, the module first <i>localizes</i> all the objects within the container, forming a holistic understanding of the scene. Notably, the user can specify the operation area beyond the container, enhancing the method's robustness in complex scenarios.
+             Specifically, this can be achieved through the prompt Molmo.
           </p>
           <p>
-            The 3D scene, represented as a point cloud, is processed by our <i>perceptive scene encoder</i>.
-              This encoder generates scene representations that are utilized by the MMA and subsequent processing components. Details of the perceptive scene encoder will be provided in the following sections.
+            To facilitate visual spatial reasoning in VLMs, we augment the visual prompt by annotating identity (ID) marks for each localized object. Then we feed the <i>mark-based visual prompt</i> to GTP-4o, which reasons about spatial relationships.
+            This reasoning process involves two key aspects: 
+            <i>(i)</i> Identifying the corresponding object ID and class name based on the user's free-form instruction. 
+            <i>(ii)</i> Determine whether the target object is obstructed and planning to remove the first graspable obstructing object.
+            GPT-4o's final output consists of the ID and class name of the next object to grasp.
           </p>
           <p>
-            The visual prompt, whether a user click or a bounding box, is handled by the <i>visual prompt encoder</i>.
-              By integrating representations from the perceptive scene encoder, the visual prompt encoder outputs refined scene representations,
-              which are subsequently processed by the MMA. For more details on visual prompts, please refer to the supplementary material.
-          </p>
-          <p>
-            The MMA takes the multimodal representations as input and outputs tokens for the LLM. The MMA is implemented as a Q-former.
-              Its outputs are projected into the LLM's representation space through a linear projector.
-              Finally, these projected representations are processed by the LLM to generate the output response.
+            Using the class name and coordinates of the corresponding ID, the object is segmented unambiguously. 
+            Finally, the <i>grasp estimation</i> module determines the most suitable 6-DoF grasp pose for picking the segmented object.
           </p>
         </div>
       </div>
@@ -409,11 +406,11 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
+    <pre><code>@article{FreeGrasp2025,
+  author    = {Jiao, Runyu and Fasoli, Alice and Giuliari, Francesco and Bortolon, Matteo and Povoli, Sergio and Mei, Guofeng and Wang, Yiming and Fabio, Poiesi},
+  title     = {Free-form Language-based Robotic Reasoning and Grasping},
+  journal   = {Arxiv},
+  year      = {2025}
 }</code></pre>
   </div>
 </section>
