@@ -133,7 +133,7 @@
               </span> -->
               <!-- Video Link. -->
               <span class="link-block">
-                <a href="https://www.youtube.com/embed/11vVfeOyf94?si=4XuxRI9MEUjskvMK"
+                <a href="https://www.youtube.com/embed/97RHsnJSDzw?si=-3skRBmPfic28s_j"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
@@ -185,7 +185,7 @@
 
 <hr>
 
-<section class="section">
+<section class="hero is-small" >
   <div class="container is-max-desktop">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
@@ -209,8 +209,7 @@
       </div>
     </div>
     <!--/ Abstract. -->
-
-
+</section>
 
 <!-- Method Section -->
 <section class="section">
@@ -247,46 +246,133 @@
 
 <hr>
 
+<section class="hero is-light is-small"> <!-- Use 'hero' to extend background fully -->
+  <div class="hero-body"> <!-- Ensures the background fills the full width -->
+    <div class="container"> <!-- Remove 'is-max-desktop' to allow full width content -->
 
-    <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/11vVfeOyf94?si=4XuxRI9MEUjskvMK"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <!-- Paper video. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Video</h2>
+          <div class="publication-video">
+            <iframe src="https://www.youtube.com/embed/97RHsnJSDzw?si=-3skRBmPfic28s_j"
+                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
         </div>
       </div>
+      <!--/ Paper video. -->
+
     </div>
-    <!--/ Paper video. -->
   </div>
 </section>
+
+
 
 <hr>
 
-
-
-<!-- Static Image Section -->
+<!-- Grounding Image Carousel -->
 <section class="hero is-small" style="background-color: white; padding: 20px 0;">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-4 has-text-centered">Free-form language grasping dataset</h2> 
+      <h2 class="title is-3 has-text-centered">Free-form language grasping dataset</h2> <!-- 缩小标题大小 -->
       
-      <!-- 单张图片 -->
-      <div class="image-container">
-        <img src="static/images/synthetic-dataset.png" 
-             alt="Grounding open-vocabulary object names and attributes" 
-             style="width: 60%; height: auto; display: block; margin: 10px auto;" />
-        <h2 class="subtitle has-text-centered" style="font-size: 0.9rem;">
-          <span style="color: rgb(255, 230, 0); font-size: 1.3em;">&#9733;</span> indicates the user-described target object, and <span style="color: rgb(4, 128, 0); font-size: 0.8em;">&#128994;</span> is/are the GT object(s) to pick.
-        </h2>
-      </div>
+      <!-- 介绍文本 -->
+      <p class="has-text-left" style="font-size: 1rem; margin-bottom: 15px;">
+        FreeGraspData is built upon MetaGraspNetV2 to evaluate robotic reasoning and grasping with free-form language instructions.
+        Grasping difficulty is categorized into six levels based on obstruction level and instance ambiguity—where ambiguity refers to scenes with multiple objects of the same category as the target, such as multiple apples when targeting one.
+      </p>
 
+      <p class="has-text-left" style="font-size: 1rem; margin-bottom: 15px;">
+        <strong>Why FreeGraspData?</strong><br>
+        Compared to existing relational grasp datasets (e.g. REGRAD) or instruction grasp detection datasets (e.g. GraspAnything), FreeGraspData offers unique challenges: 
+        <p>
+        (1) Complex bin-picking scenarios with diverse objects, deep occlusion graphs, and random placements, making spatial reasoning difficult for vision-language models. 
+        </p>
+        <p>
+        (2) A fine-grained difficulty classification based on obstruction level and instance ambiguity, enabling better evaluation of reasoning capabilities. 
+        </p>
+        <p>
+        (3) Free-form language instructions collected from human annotators, enhancing natural language understanding in grasping tasks.</p>
+      </p>
+
+      <!-- Swiper 轮播容器 -->
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          
+          <!-- Slide 1 -->
+          <div class="swiper-slide">
+            <img src="static/images/EwoA.png" alt="Grounding open-vocabulary object names and attributes" style="width: 60%; height: auto; display: block; margin: 10px auto;" />
+          </div>
+          
+          <!-- Slide 2 -->
+          <div class="swiper-slide">
+            <img src="static/images/EwA.png" alt="Grounding complex relations between objects" style="width: 60%; height: auto; display: block; margin: 10px auto;" />
+          </div>
+          
+          <!-- Slide 3 -->
+          <div class="swiper-slide">
+            <img src="static/images/MwoA.png" alt="Grounding user affordances with contextual semantics" style="width: 60%; height: auto; display: block; margin: 10px auto;" />
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="swiper-slide">
+            <img src="static/images/MwA.png" alt="Grounding user affordances with contextual semantics" style="width: 60%; height: auto; display: block; margin: 10px auto;" />
+          </div>
+
+          <!-- Slide 5 -->
+          <div class="swiper-slide">
+            <img src="static/images/HwoA.png" alt="Grounding user affordances with contextual semantics" style="width: 60%; height: auto; display: block; margin: 10px auto;" />
+          </div>
+
+          <!-- Slide 6 -->
+          <div class="swiper-slide">
+            <img src="static/images/HwA.png" alt="Grounding user affordances with contextual semantics" style="width: 60%; height: auto; display: block; margin: 10px auto;" />
+          </div>
+
+        </div>
+        
+        <!-- 左右箭头 -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        
+        <!-- 分页指示点 -->
+        <div class="swiper-pagination" style="position: relative; margin-top: -20px;"></div>
+      </div>
+      
+      <!-- 固定注释 -->
+      <p class="has-text-centered" style="font-size: 0.9rem; margin-top: 10px;">
+        <span style="color: rgb(255, 230, 0); font-size: 1.3em;">&#9733;</span> indicates the user-described target object, and 
+        <span style="color: rgb(4, 128, 0); font-size: 0.8em;">&#128994;</span> is/are the GT object(s) to pick.
+      </p>
+      
     </div>
   </div>
 </section>
-<!-- End Static Image Section -->
 
+<!-- Swiper.js 依赖 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<!-- 轮播初始化 -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var swiper = new Swiper(".swiper-container", {
+      loop: true,  // 无限循环
+      autoplay: {
+        delay: 3000,  // 3秒切换
+        disableOnInteraction: false, // 用户交互后继续播放
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,  // 允许点击分页切换
+      },
+    });
+  });
+</script>
 
 <!-- Static Image Section -->
 <section class="hero is-small" style="background-color: white; padding: 20px 0;">
@@ -312,33 +398,35 @@
 <hr>
 
 
+
 <section class="section">
-  <div class="container is-max-desktop">
+  <div class="container" style="max-width: 100%;"> <!-- Remove max width limit -->
 
-    <!-- Animation. -->
     <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Example of the complete method </h2>
+      <div class="column is-full has-text-centered"> <!-- Ensures full width -->
+        <h2 class="title is-3">Example of the complete method</h2>
 
-        <!-- Only Keep the Image -->
         <div class="has-text-centered">
           <img src="./static/images/method_vis.png"
           alt="Method Visualization"
-          style="width: 90%; height: auto; display: block; margin: 0 auto;" />
+          style="max-width: 80%; width: auto; height: auto; display: block; margin: 0 auto;" />
         </div>
         <br/>
-        <!--/ Interpolating. -->
       </div>
     </div>
-    <!--/ Animation. -->
 
+  </div>
+</section>
 
-    <!-- Concurrent Work. -->
+<section class="hero is-small" style="background-color: white; padding: 20px 0;">
+  <div class="container" style="max-width: 80%;"> <!-- Matches previous section -->
+
+    <!-- Related Links Section -->
     <div class="columns is-centered">
-      <div class="column is-full-width">
+      <div class="column is-full has-text-left"> <!-- Full width & centered text -->
         <h2 class="title is-3">Related links</h2>
 
-        <div class="content has-text-justified">
+        <div class="content has-text-left" style="margin: 0 auto; max-width: 80%;">
           <p>
             Many excellent works have collectively contributed to our work.
           </p>
@@ -354,11 +442,13 @@
           <p>
             [4] <a href="https://github.com/luca-medeiros/lang-segment-anything">L. Medeiros, “Language Segment-Anything.” [Online]. Available: https://github.com/luca-medeiros/lang-segment-anything. 2025.</a>
           </p>
-
+          <p>
+            [5] <a href="https://h-freax.github.io/thinkgrasp_page/">Gilles, Maximilian, et al. "MetaGraspNetV2: All-in-One Dataset Enabling Fast and Reliable Robotic Bin Picking via Object Relationship Reasoning and Dexterous Grasping." TASE. 2024.</a>
+          </p>
         </div>
       </div>
     </div>
-    <!--/ Concurrent Work. -->
+    <!--/ Related Links Section -->
 
   </div>
 </section>
