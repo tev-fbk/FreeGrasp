@@ -274,9 +274,9 @@
 <section class="hero is-small" style="background-color: white; padding: 20px 0;">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3 has-text-centered">Free-form language grasping dataset</h2> <!-- 缩小标题大小 -->
+      <h2 class="title is-3 has-text-centered">Free-form language grasping dataset</h2>
       
-      <!-- 介绍文本 -->
+      <!-- Instruction text -->
       <p class="has-text-left" style="font-size: 1rem; margin-bottom: 15px;">
         FreeGraspData is built upon MetaGraspNetV2 to evaluate robotic reasoning and grasping with free-form language instructions.
         Grasping difficulty is categorized into six levels based on obstruction level and instance ambiguity—where ambiguity refers to scenes with multiple objects of the same category as the target, such as multiple apples when targeting one.
@@ -285,17 +285,14 @@
       <p class="has-text-left" style="font-size: 1rem; margin-bottom: 15px;">
         <strong>Why FreeGraspData?</strong><br>
         Compared to existing relational grasp datasets (e.g. REGRAD) or instruction grasp detection datasets (e.g. GraspAnything), FreeGraspData offers unique challenges: 
-        <p>
-        (1) Complex bin-picking scenarios with diverse objects, deep occlusion graphs, and random placements, making spatial reasoning difficult for vision-language models. 
-        </p>
-        <p>
-        (2) A fine-grained difficulty classification based on obstruction level and instance ambiguity, enabling better evaluation of reasoning capabilities. 
-        </p>
-        <p>
-        (3) Free-form language instructions collected from human annotators, enhancing natural language understanding in grasping tasks.</p>
-      </p>
+        <ul style="font-size: 1rem; margin-bottom: 15px; list-style-type: disc; padding-left: 20px;">
+          <li>Complex bin-picking scenarios with diverse objects, deep occlusion graphs, and random placements, making spatial reasoning difficult for vision-language models.</li>
+          <li>A fine-grained difficulty classification based on obstruction level and instance ambiguity, enabling better evaluation of reasoning capabilities.</li>
+          <li>Free-form language instructions collected from human annotators, enhancing natural language understanding in grasping tasks.</li>
+        </ul>
+        
 
-      <!-- Swiper 轮播容器 -->
+      <!-- Swiper Carousel container -->
       <div class="swiper-container">
         <div class="swiper-wrapper">
           
@@ -331,15 +328,15 @@
 
         </div>
         
-        <!-- 左右箭头 -->
+        <!-- Navigation Arrows -->
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
         
-        <!-- 分页指示点 -->
+        <!-- Pagination Dots -->
         <div class="swiper-pagination" style="position: relative; margin-top: -20px;"></div>
       </div>
       
-      <!-- 固定注释 -->
+      <!-- Fixed Annotation -->
       <p class="has-text-centered" style="font-size: 0.9rem; margin-top: 10px;">
         <span style="color: rgb(255, 230, 0); font-size: 1.3em;">&#9733;</span> indicates the user-described target object, and 
         <span style="color: rgb(4, 128, 0); font-size: 0.8em;">&#128994;</span> is/are the GT object(s) to pick.
@@ -349,18 +346,18 @@
   </div>
 </section>
 
-<!-- Swiper.js 依赖 -->
+<!-- Swiper.js Dependency -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
-<!-- 轮播初始化 -->
+<!-- Carousel Initialization -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     var swiper = new Swiper(".swiper-container", {
-      loop: true,  // 无限循环
+      loop: true,  // Infinite loop
       autoplay: {
-        delay: 3000,  // 3秒切换
-        disableOnInteraction: false, // 用户交互后继续播放
+        delay: 3000,  // Switch every 3 seconds
+        disableOnInteraction: false, // Continue autoplay after user interaction
       },
       navigation: {
         nextEl: ".swiper-button-next",
@@ -368,7 +365,7 @@
       },
       pagination: {
         el: ".swiper-pagination",
-        clickable: true,  // 允许点击分页切换
+        clickable: true,  // Allow clicking pagination dots
       },
     });
   });
@@ -380,7 +377,7 @@
     <div class="container">
       <h2 class="title is-4 has-text-centered">Real-world setup</h2> 
       
-      <!-- 单张图片 -->
+      <!-- single image -->
       <div class="image-container">
         <img src="static/images/real-dataset.png" 
              alt="Grounding open-vocabulary object names and attributes" 
