@@ -1,6 +1,6 @@
 # FreeGrasp
 
-This is the repository that contains source code for the [FreeGrasp website](https://ryan7180.github.io/FreeGrasp/).
+This is the repository that contains source code for the [FreeGrasp website](https://tev-fbk.github.io/FreeGrasp/).
 
 If you find FreeGrasp useful for your work please cite:
 ```
