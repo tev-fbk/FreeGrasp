@@ -1,4 +1,4 @@
-# FreeGrasp
+# FreeGrasp: Free-form language-based robotic reasoning and grasping
 
 This is the repository that contains source code for the [FreeGrasp website](https://tev-fbk.github.io/FreeGrasp/).
 
