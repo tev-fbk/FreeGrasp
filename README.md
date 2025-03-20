@@ -4,10 +4,11 @@ This is the repository that contains source code for the [FreeGrasp website](htt
 
 If you find FreeGrasp useful for your work please cite:
 ```
-@article{FreeGrasp2025
-  author    = {Jiao, Runyu and Fasoli, Alice and Giuliari, Francesco and Bortolon, Matteo and Povoli, Sergio and Mei, Guofeng and Wang, Yiming and Fabio, Poiesi},
-  title     = {Free-form Language-based Robotic Reasoning and Grasping},
-  year      = {2025}
+@article{jiao2025free,
+  title={Free-form language-based robotic reasoning and grasping},
+  author={Jiao, Runyu and Fasoli, Alice and Giuliari, Francesco and Bortolon, Matteo and Povoli, Sergio and Mei, Guofeng and Wang, Yiming and Poiesi, Fabio},
+  journal={arXiv preprint arXiv:2503.13082},
+  year={2025}
 }
 ```
 
