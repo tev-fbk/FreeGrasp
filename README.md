@@ -9,7 +9,7 @@ If you find FreeGrasp useful for your work please cite:
 @article{jiao2025free,
   title={Free-form language-based robotic reasoning and grasping},
   author={Jiao, Runyu and Fasoli, Alice and Giuliari, Francesco and Bortolon, Matteo and Povoli, Sergio and Mei, Guofeng and Wang, Yiming and Poiesi, Fabio},
-  journal={arXiv preprint arXiv:2503.13082},
+  journal={IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
   year={2025}
 }
 ```
