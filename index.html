@@ -269,10 +269,40 @@
   </div>
 </section>
 
-
-
 <hr>
 
+<!-- Occlusion Graph Section -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div style="text-align: center;">
+
+        <!-- Section Title -->
+        <h2 class="title is-3">Occlusion Graph</h2>
+
+        <!-- Description ABOVE image -->
+        <p style="font-size: 1rem; color: #444; max-width: 900px; margin: 0 auto 20px auto; text-align: left;">
+          We introduce <strong>occlusion graphs</strong> to represent spatial dependencies between objects in complex scenes.
+          The two examples below illustrate how occlusion reasoning helps robotic agents plan multi-step actions to retrieve target objects:
+          <br><br>
+          <strong>(Left) A real-world scene with a yellow duck as the goal.</strong> Objects are color-coded by difficulty (green: easy, yellow: medium, brown: hard).
+          The occlusion graph shows layer-wise dependencies, and the bottom row illustrates a sample action plan to retrieve the duck.
+          <br><br>
+          <strong>(Right) A synthetic scene from FreeGraspData,</strong> where the goal is to pick the submarine toy. Its occlusion graph captures multiple dependencies, and the step plan is shown below.
+          <br><br>
+          Directed arrows represent occlusions: A → B means A blocks B and must be removed first.
+        </p>
+
+        <!-- Image -->
+        <img src="static/images/occ.png" alt="Occlusion Graph Examples" style="width: 100%; height: auto; margin-top: 10px;" />
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr>
+                
 <!-- Grounding Image Carousel -->
 <section class="hero is-small" style="background-color: white; padding: 20px 0;">
   <div class="hero-body">
